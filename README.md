@@ -1,8 +1,10 @@
 # Movie-DataBase
 This is a web-app where we can add movies details like Movie Name, Actor, Director, etc and also can delete, update, and display movies details
 
-
+Adding, Viewing and Deleting movies data
 <img src="moviedatabase.png" alt="alt text" width="1050" height="480">
+
+Updating movies data
 <img src="moviedb2.png" alt="alt text" width="1050" height="480">
 
 
