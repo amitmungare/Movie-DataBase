@@ -2,8 +2,8 @@
 This is a web-app where we can add movies details like Movie Name, Actor, Director, etc and also can delete, update, and display movies details
 
 
-<img src="moviedatabase.png" alt="alt text" width="1050" height="500">
-<img src="moviedb2.png" alt="alt text" width="1050" height="500">
+<img src="moviedatabase.png" alt="alt text" width="1050" height="450">
+<img src="moviedb2.png" alt="alt text" width="1050" height="450">
 
 
 To run the web-app on your server do the following steps:-
