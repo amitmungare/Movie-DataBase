@@ -1,8 +1,10 @@
+// importing the DataBase
 const db = require('../config/mongoose');
 
+// importng the Schema For movielist
 const Movie = require('../models/movieList');
 
-
+// creating Tasks
 module.exports.create = function (req, res) {
 
     Movie.create({
@@ -22,7 +24,7 @@ module.exports.create = function (req, res) {
 
 }
 
-
+// passing data 
 module.exports.movies = function(req, res){
 
     Movie.findById(req.params.id, function(err, movie){
@@ -34,11 +36,12 @@ module.exports.movies = function(req, res){
 
 }
 
-
+// deleting movie data
 module.exports.deleteSingle = function(req, res){
 
     let id = req.query.id;
 
+    // finding and deleting tasks from the DB
     Movie.findByIdAndDelete(id, function (err) {
 
         if (err) {
@@ -49,7 +52,7 @@ module.exports.deleteSingle = function(req, res){
     });
 }
 
-
+// updating movies database 
 module.exports.update = function(req, res){
     
     Movie.findByIdAndUpdate(req.params.id, req.body, function(err, user){

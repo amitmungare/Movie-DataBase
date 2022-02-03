@@ -1,5 +1,7 @@
+// import database model
 const Movie = require('../models/movieList');
 
+// controller function for route '/'
 module.exports.home = function(req, res){
 
     Movie.find({}, function (err, movielist) {
