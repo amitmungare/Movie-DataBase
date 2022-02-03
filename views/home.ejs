@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="https://kit.fontawesome.com/4072b8f88c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="main-div">
+
+        
+
+        <div id="entry-div">
+            <h1 id="heading">My Movies DataBase</h1>
+
+            <form action="/movies/create-movie" method="post">
+
+                <div id="data-entry-div">
+
+                    <div>
+                        <h3>Movie name</h3>
+                        <input class="input-data" type="text" name="name" id="name" placeholder="Enter Movie name" required>
+                    </div>
+    
+                    <div>
+                        <h3>Actor</h3>
+                        <input class="input-data" type="text" name="actor" id="actor" placeholder="Enter Movie actor" required>
+                    </div>
+    
+                    <div>
+                        <h3>Actress</h3>
+                        <input class="input-data" type="text" name="actress" id="actress" placeholder="Enter Movie actress" required>
+                    </div>
+    
+                    <div>
+                        <h3>Director</h3>
+                        <input class="input-data" type="text" name="director" id="director" placeholder="Enter Movie director" required>
+                    </div>
+    
+                    <div>
+                        <h3>Year</h3>
+                        <input class="input-data" type="text" name="year" id="year" placeholder="Enter Movie year" required>
+                    </div>
+    
+                    <input id="submit-btn" type="submit" value="Submit">
+
+                </div>
+
+                
+
+            </form>
+
+        </div>
+
+        <div id="data-view-div">
+
+            <h1 id="heading">Movies List</h1>
+
+            <form action="" method="post">
+
+                <% for(let i of movie_list){ %>
+
+                    <div id="display-div">
+
+                        <div class="size-class">
+                            <span class="name-class">Movie name</span><br>
+                            <span class="name-data-class">
+                                <%= i.name %>
+                            </span>
+                        </div>
+
+                        <div class="size-class">
+                            <span class="name-class"> Actor</span><br>
+                            <span class="name-data-class">
+                                <%= i.actor %>
+                            </span>
+                        </div>
+
+                        <div class="size-class">
+                            <span class="name-class"> Actress</span><br>
+                            <span class="name-data-class">
+                                <%= i.actress %>
+                            </span>
+                        </div>
+
+                        <div class="size-class">
+                            <span class="name-class"> Director</span><br>
+                            <span class="name-data-class">
+                                <%= i.director %>
+                            </span>
+                        </div>
+
+                        <div class="size-class">
+                            <span class="name-class"> Year</span><br>
+                            <span class="name-data-class">
+                                <%= i.year %>
+                            </span>
+                        </div>
+
+                        <div class="size-class">
+                            <span>
+                                <a id="edit-tag" href="/movies/movieData/<%= i.id %>">Edit</a>
+                            </span>
+                        </div>
+
+                        <div class="size-class">
+                            <span>
+                                <a href="/movies/delete-movie-single/?id=<%= i._id %>">
+                                    <i id="delete-icon" class="far fa-trash-alt"></i>
+                                </a>
+                            </span>
+                        </div>
+                        
+                    </div>
+
+                    
+
+                <% } %>
+
+            </form>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

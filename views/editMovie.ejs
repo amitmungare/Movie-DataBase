@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/editMovie.css">
+    <script src="https://kit.fontawesome.com/4072b8f88c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="main-div">
+
+        <a href="/"> <i id="back-icon" class="fas fa-arrow-left"></i></a>
+
+        <div id="entry-div">
+            <h1 id="heading">Update Movie</h1>
+
+            <form action="/movies/update/<%= movie_data.id %>" method="post">
+
+                <div id="data-entry-div">
+
+                    <div>
+                        <h3>Movie name</h3>
+                        <input class="input-data" type="text" name="name" id="name" value="<%= movie_data.name %>" required>
+                    </div>
+    
+                    <div>
+                        <h3>Actor</h3>
+                        <input class="input-data" type="text" name="actor" id="actor" value="<%= movie_data.actor %>" required>
+                    </div>
+    
+                    <div>
+                        <h3>Actress</h3>
+                        <input class="input-data" type="text" name="actress" id="actress" value="<%= movie_data.actress %>" required>
+                    </div>
+    
+                    <div>
+                        <h3>Director</h3>
+                        <input class="input-data" type="text" name="director" id="director" value="<%= movie_data.director %>" required>
+                    </div>
+    
+                    <div>
+                        <h3>Year</h3>
+                        <input class="input-data" type="text" name="year" id="year" value="<%= movie_data.year %>" required>
+                    </div>
+    
+                    <input id="submit-btn" type="submit" value="Update">
+
+                </div>
+
+                
+
+            </form>
+
+        </div>
+
+        <div id="data-view-div">
+
+            <h1 id="heading">Movies Details</h1>
+
+
+                    <div id="display-div">
+
+                        <div class="size-class">
+                            <span class="name-class">Movie name</span><br>
+                            <span class="name-data-class">
+                                <%= movie_data.name %>
+                            </span>
+                        </div>
+
+                        <div class="size-class">
+                            <span class="name-class"> Actor</span><br>
+                            <span class="name-data-class">
+                                <%= movie_data.actor %>
+                            </span>
+                        </div>
+
+                        <div class="size-class">
+                            <span class="name-class"> Actress</span><br>
+                            <span class="name-data-class">
+                                <%= movie_data.actress %>
+                            </span>
+                        </div>
+
+                        <div class="size-class">
+                            <span class="name-class"> Director</span><br>
+                            <span class="name-data-class">
+                                <%= movie_data.director %>
+                            </span>
+                        </div>
+
+                        <div class="size-class">
+                            <span class="name-class"> Year</span><br>
+                            <span class="name-data-class">
+                                <%= movie_data.year %>
+                            </span>
+                        </div>
+                        
+                    </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

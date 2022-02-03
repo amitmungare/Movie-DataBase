@@ -1,0 +1,106 @@
+body{
+    background-image: url('/images/bgimage.png');
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#main-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+#heading{
+    color: white;
+    background-color: mediumpurple;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#back-icon{
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+#entry-div{
+    margin: 5rem;
+    margin-right: 12rem;
+}
+
+#data-entry-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 182, 193,0.8);
+    padding: 20px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.input-data{
+    width: 20rem;
+    font-size: 1rem;
+    background: none;
+    border: none;  
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-bottom: 2px solid blue;
+}
+
+#submit-btn{
+    margin: 20px;
+    padding: 20px;
+    font-size: 1.2rem;
+    background-color: rgb(119, 241, 119);
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* display  */
+
+#data-view-div{
+    margin-top: 5rem;
+}
+
+#display-div{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(135, 253, 214,0.8);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.size-class{
+    margin: 5px;
+    padding: 5px;
+}
+
+#delete-icon{
+    font-size: 1.5rem;
+    color: red;
+}
+
+.name-class{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 2px;
+}
+
+#edit-tag{
+    font-size: 1.6rem;
+}
+
+.name-data-class{
+    font-size: 1.4rem;
+    padding: 4px;
+    padding-top: 10px;
+}
